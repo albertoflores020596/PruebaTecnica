@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Tecnica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script  src="script.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    
+</head>
+<body>
+       
+ <!-- Formulario para la informacion de los empleados-->
+    <form class="abs-center   shadow p-2 mb-5 bg-white rounded " id="nuevo-registro" novalidate>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <label >Nombre:</label>
+            <input type="text" class="form-control" id="nombre" >
+          </div>
+          <div class="col-md-4 mb-3">
+            <label >Apellido paterno:</label>
+            <input type="text" class="form-control" id="apellido-paterno"  >
+          </div>
+          <div class="col-md-4 mb-3">
+            <label >Apellido materno:</label>
+            <input type="text" class="form-control" id="apellido-materno"   >
+          </div>
+        </div>
+
+        <div class="row ">
+          <div class="col-md-3 mb-3">
+            <label >Fecha de Nacimineto:</label>
+            <input type="date" class="form-control" id="fecha-nacimiento" >
+    
+          </div>
+          <div class="col-md-3 mb-3">
+            <label>Area:</label>
+            <input type="text" class="form-control" id="area"  >
+          
+          </div>
+          
+          </div>
+        </div>
+        <button class="btn btn-primary btn-md" type="button" onClick="agregarRegistro()" >Agregar</button>
+        <button id ="btnEliiminar"class="btn btn-secondary btn-md" type="button" onClick="Eliminar()" >Remover</button>
+        <label id="id" ></label>
+        
+
+      </form>
+
+<!-- Tabla donde se mostraran los empleados-->
+      <div class="container">
+    <table id="tbRegistros"class="table table-bordered ">
+       <thead class="table-dark">
+            <tr>
+              <th hidden>Id</th>
+              <th>Apellido paterno</th>
+              <th>Apellido materno</th>
+              <th>Nombre</th>
+              <th>Fecha de nacimiento</th>
+              <th>Área</th>
+            </tr>
+          </thead>
+          <tbody class="table-ligh">
+            <!-- Aquí se agregarán los registros mediante JavaScript -->
+          </tbody>
+    </table>
+    </div>    
+</body>
+</html>
+
